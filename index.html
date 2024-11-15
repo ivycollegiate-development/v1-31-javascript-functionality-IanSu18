@@ -1,21 +1,19 @@
-why
-doesn't
-this
-text
-look
-like
-that?
-
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My First Interactive Page</title>
+    <title>My Interactive Page</title>
 </head>
 <body>
     <h1 id="myHeading">Welcome to JavaScript!</h1>
-    
+    <button id="changeTextButton">Click Me!</button>x
     <script>
-        console.log("Hello from JavaScript!");
+        console.log("Hello from JavaScript!")
+        const button = document.getElementById("changeTextButton");
+        const heading = document.getElementById("myHeading");
+        button.addEventListener("click", function() {
+        heading.innerHTML = "Text Changed!";
+        });
+
     </script>
 </body>
 </html>
