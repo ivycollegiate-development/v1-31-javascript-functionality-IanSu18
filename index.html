@@ -13,7 +13,21 @@
         button.addEventListener("click", function() {
         heading.innerHTML = "Text Changed!";
         });
-
+    </script>
+    <button id="hoverButton">Hover Over Me!</button>
+    <script>
+        const hoverButton = document.getElementById("hoverButton");
+        hoverButton.addEventListener("mouseover", function() { hoverButton.style.backgroundColor = "yellow";
+        });
+        hoverButton.addEventListener("mouseout", function() { hoverButton.style.backgroundColor = "white";
+        });
+    </script>
+    <button id="counterButton">Click Count: 0</button>
+    <script>
+        const counterButton = document.getElementById("counterButton"); let clickCount = 0;
+        counterButton.addEventListener("click", function() { clickCount = clickCount + 1;
+        counterButton.innerHTML = "Click Count: " + clickCount;
+        });
     </script>
 </body>
 </html>
